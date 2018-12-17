@@ -30,15 +30,12 @@ public class TodayServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.setContentType("text/html");
+		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<head><title>presenttime</title></head>");
 		out.println("<body>");
-		out.println("<a herf=\"./WebContent/index.html\">메인화면</a>");
-
-			
-		
+		out.println("<a href=\"./WebContent/index.html\">메인화면</a>");
 		out.println("</body>");
 		out.println("</html>");
 	}

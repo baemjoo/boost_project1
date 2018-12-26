@@ -36,17 +36,16 @@ public class TodayServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
-		out.println("<head><title>presenttime</title></head>");
-		out.println("<style>");
-		out.println("<link rel=\"stylesheet\" href=\""+getServletContext().getContextPath()+"/aboutmecss.css\">");
-		out.println("</style>");
+		out.println("<head>");
+		out.println("<title>presenttime</title>");
+		out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/aboutmecss.css\">");
+		out.println("</head>");
 		
-		out.println("<body>");
+		out.println("<body id=\"today\">");
+		out.println("<div id =\"pretime\">");
+		out.println("<a href=\""+request.getContextPath()+"/index.html\">메인화면</a>");
 		
-		out.println("<div id =\"today\">");
-		out.println("<a href=\""+getServletContext().getContextPath()+"/index.html\">메인화면</a>");
-		
-		out.println("<div class=\"pretime\">");
+//		out.println("<div class=\"content\">");
 		LocalDate currentDate = LocalDate.now();
 		int year = currentDate.getYear();
 		int month = currentDate.getMonthValue();
@@ -57,7 +56,7 @@ public class TodayServlet extends HttpServlet {
 		int minute = currentTime.getMinute();
 		
 		out.println("현재시간 : " +year+"/"+month+"/"+day+" "+hour+":"+minute);
-		out.println("</div>");
+//		out.println("</div>");
 		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");

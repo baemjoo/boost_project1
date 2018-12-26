@@ -252,20 +252,18 @@ a:hover{
 #today{
 	background-color:#FFF;
 	position:absolute;
-	display: table;
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
 }
 
-#today > a{
-	font-size : 15px;
+#today > a {
 	text-align:left;
 }
 
 #today .pretime {
-	display:table-cell;
+	display:inline-block;
 	text-align:center;
 	vertical-align: middle;
 }

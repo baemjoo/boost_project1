@@ -37,25 +37,16 @@ public class TodayServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
 		out.println("<head><title>presenttime</title></head>");
+		out.println("<style>");
+		out.println("<link rel=\"stylesheet\" href=\""+getServletContext().getContextPath()+"/aboutmecss.css\">");
+		out.println("</style>");
+		
 		out.println("<body>");
+		
+		out.println("<div id =\"today\">");
 		out.println("<a href=\""+getServletContext().getContextPath()+"/index.html\">메인화면</a>");
 		
-		
-		//현재 시간
-//		LocalDateTime now = LocalDateTime.now();
-//		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy년M월d일ah시m분");
-//		String pretime = now.format(dateTimeFormatter);
-//		
-//		int year = Integer.parseInt(pretime.substring(0, 4));
-//		int month = Integer.parseInt(pretime.substring(5,6));
-//		int mon_of_day = Integer.parseInt(pretime.substring(7,8));
-//		String pa = pretime.substring(9,10);
-//		
-//		int hour = Integer.parseInt(pretime.substring(10,11));
-//		int minute = Integer.parseInt(pretime.substring(13,14));
-//		
-//		out.println("현재 시간 : "+ year + month + pa + hour + minute);
-		
+		out.println("<div class=\"pretime\">");
 		LocalDate currentDate = LocalDate.now();
 		int year = currentDate.getYear();
 		int month = currentDate.getMonthValue();
@@ -66,7 +57,8 @@ public class TodayServlet extends HttpServlet {
 		int minute = currentTime.getMinute();
 		
 		out.println("현재시간 : " +year+"/"+month+"/"+day+" "+hour+":"+minute);
-		
+		out.println("</div>");
+		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");
 		out.close();

@@ -24,6 +24,7 @@ body{
  position:relative;
  height:100px;
  text-align:center;
+ color:#c8c8c8;
 }
 
 #header,#container,#footer{
@@ -154,15 +155,15 @@ a:hover{
   position:relative;
   padding-top: 20px;
   padding-bottom:20px;
-  height:auto;
+  width:200px;
 }
 
  .material_item > span{
   display: inline-block;
   overflow:hidden;
   position:relative;
-  min-height: 100%;
-  vertical-align: top;
+  height:auto;
+  vertical-align: middle;
   border: 1px solid black;
 }
 
@@ -170,12 +171,12 @@ a:hover{
 
 #aboutme{
   position : relative;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 #aboutme .aboutme_basic{
-  height: 250px;
+  height: 200px;
   padding-top: 3%;
   padding-bottom: 2%;
   padding-left: 8%;
@@ -226,15 +227,13 @@ a:hover{
   float: left;
   margin-right: 3%;
   max-width: 100%;
-  height:auto;
   border:3px solid #454545;
 }
 
-#photo .photo_img > img{
+#photo .photo_img > span{
   display: inline-block;
   overflow:hidden;
   position:relative;
-  max-width: 100%;
   height:auto;
   vertical-align: top;
 }
@@ -245,4 +244,21 @@ a:hover{
   text-align:left;
   padding-left: 4%;
   padding-right: 3%;
+}
+
+/* today servlet content */
+
+#today{
+	position:relative;
+}
+
+#today > a{
+	font-size : 30px;
+	text-align:left;
+}
+
+#today .pretime {
+	vertical-align : middle;
+	font-size:100px;
+	border:2px;
 }

@@ -41,11 +41,11 @@ public class TodayServlet extends HttpServlet {
 		out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/aboutmecss.css\">");
 		out.println("</head>");
 		
-		out.println("<a href=\""+request.getContextPath()+"/index.html\">메인화면</a>");
 		
 		out.println("<body id=\"today\">");
-		out.println("<div id =\"pretime\">");
-		
+		out.println("<p>");
+		out.println("<a href=\""+request.getContextPath()+"/index.html\">메인화면</a>");
+		out.println("</p>");
 		out.println("<div class=\"content\">");
 		LocalDate currentDate = LocalDate.now();
 		int year = currentDate.getYear();
@@ -56,8 +56,12 @@ public class TodayServlet extends HttpServlet {
 		int hour = currentTime.getHour();
 		int minute = currentTime.getMinute();
 		
+		out.println("<span>");
+		out.println("<strong>");
 		out.println("현재시간 : " +year+"/"+month+"/"+day+" "+hour+":"+minute);
-		out.println("</div>");
+		out.println("</strong>");
+		out.println("</span>");
+		
 		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");
